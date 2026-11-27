@@ -2,10 +2,11 @@
   "name": "lot-za-lotom",
   "version": "1.0.0",
   "private": true,
-  "description": "A local two-player collection auction game",
+  "description": "A local collection auction game for two or three players",
   "scripts": {
     "test": "node tests/browser.cjs",
-    "test:photos": "node tests/photos.cjs"
+    "test:photos": "node tests/photos.cjs",
+    "test:players": "node tests/players.cjs"
   },
   "devDependencies": {
     "playwright": "1.65.1"

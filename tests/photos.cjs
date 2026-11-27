@@ -19,7 +19,7 @@ const assert=require('node:assert/strict');
  await page.locator('#copy-request').click();
  assert.equal(await page.locator('#request-text').evaluate(el=>el.selectionEnd-el.selectionStart),prompt.length);
  const [textDownload]=await Promise.all([page.waitForEvent('download'),page.locator('#save-request').click()]);
- assert.equal(textDownload.suggestedFilename(),'two-scenes-request.txt');
+ assert.equal(textDownload.suggestedFilename(),'2-scenes-request.txt');
  await page.locator('.close-request').click();
  const testImage=await page.screenshot();
  await page.locator('[data-photo-upload="0"]').setInputFiles({name:'scene.png',mimeType:'image/png',buffer:testImage});
