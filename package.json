@@ -4,7 +4,8 @@
   "private": true,
   "description": "A local two-player collection auction game",
   "scripts": {
-    "test": "node tests/browser.cjs"
+    "test": "node tests/browser.cjs",
+    "test:photos": "node tests/photos.cjs"
   },
   "devDependencies": {
     "playwright": "1.65.1"

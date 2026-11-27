@@ -5,7 +5,7 @@
   <meta name="theme-color" content="#eaf4fb"><meta name="description" content="Соберите свой идеальный мир за 20 игровых рублей. Аукцион для двоих на одном экране.">
   <title>Лот за лотом — аукцион для двоих</title>
   <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%232155d9'/%3E%3Ctext x='10' y='46' font-size='42'%3E🔨%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css?v=2">
 </head>
 <body>
   <header class="top"><a class="brand" href="./" aria-label="Лот за лотом, главная"><span class="brand-icon">↗</span> лот за лотом<span class="brand-dot">.</span></a><button id="help" class="text-button">Как играть <span>?</span></button></header>
@@ -13,6 +13,8 @@
   <footer>Двое игроков. Один экран. Много «ну отдай мне!»<br><span>Только игровые рубли · Без покупок и регистрации</span></footer>
   <dialog id="rules"><div class="dialog-inner"><button class="close" aria-label="Закрыть правила">×</button><span class="eyebrow">ПРАВИЛА КОРОТКО</span><h2>Раз, два… продано!</h2><ol><li>Выберите тему. У каждого — 20 игровых рублей.</li><li>Откройте лот. Торгуйтесь вслух, начиная с 1 рубля.</li><li>Введите итоговую цену и нажмите на покупателя. Платит только победитель торгов.</li><li>Не нужен никому? Пропустите. Ошиблись? Отмените ход.</li><li>После 12 лотов сравните свои коллекции-картинки.</li></ol><h3>Как считаются очки</h3><p>У каждого предмета заранее указаны очки пользы, уюта и стиля. Их сумма идёт в результат. За каждый разный тип предметов — ещё 2 очка. Цена и оставшиеся деньги очков не дают. У кого больше сумма — тот победил; при равенстве — ничья.</p><p class="muted">Картинки собираются из ваших покупок автоматически, без нейросети. Игра сохраняется только в этом браузере. На другом телефоне будет отдельная партия.</p><button class="primary close-rules">Всё понятно</button></div></dialog>
   <dialog id="confirm"><div class="dialog-inner"><h2>Начать заново?</h2><p>Текущая партия будет заменена новой.</p><div class="button-row"><button id="cancel-reset" class="secondary">Продолжить игру</button><button id="confirm-reset" class="primary">Новая партия</button></div></div></dialog>
+  <dialog id="photo-request"><div class="dialog-inner"><button class="close-request close" aria-label="Закрыть запрос">×</button><span class="eyebrow">ДВЕ СЦЕНЫ ВМЕСТО КАРТОЧЕК</span><h2>Покажите свой мир</h2><p>Скопируйте сообщение и пришлите Бро в ваш чат. Он сможет создать две реалистичные картинки по покупкам. Сайт сам картинки не генерирует и ничего не отправляет.</p><label class="field" for="request-text">Сообщение с покупками обоих игроков</label><textarea id="request-text" rows="10" readonly></textarea><div class="button-row"><button class="primary" id="copy-request">Скопировать сообщение</button><button class="secondary" id="save-request">Скачать текст</button></div><p class="muted request-note">Полученные картинки можно сохранить на телефон, затем добавить в итоги под именем каждого игрока. Загрузка остаётся в вашем браузере.</p></div></dialog>
+  <dialog id="photo-view"><div class="dialog-inner"><button class="close-view close" aria-label="Закрыть картинку">×</button><h2 id="photo-view-title"></h2><img id="photo-view-image" alt=""></div></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
-  <script src="data.js"></script><script src="app.js"></script>
+  <script src="data.js"></script><script src="app.js?v=2"></script>
 </body></html>

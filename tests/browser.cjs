@@ -44,6 +44,7 @@ assert(await page.evaluate(()=>validGame(game)));
 const result=await page.evaluate(()=>[score(0),score(1)]);
 for(const s of result)assert.equal(s.total,s.totals.reduce((a,b)=>a+b,0)+s.variety);
 await page.screenshot({path:out+'/result-mobile.png',fullPage:true});
+await page.locator('.purchase-details').first().locator('summary').click();
 const [download]=await Promise.all([page.waitForEvent('download'),page.locator('[data-download="0"]').click()]);
 assert(download.suggestedFilename().endsWith('.svg'));
 await download.saveAs(out+'/result.svg');
